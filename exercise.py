@@ -4,3 +4,5 @@
 
 
 # added some packages to help format python on vsc?
+
+print('5*5')

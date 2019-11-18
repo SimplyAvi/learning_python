@@ -15,5 +15,10 @@ print('have to work on git merge to check the differences between one branch on 
 # Methonds and functions
 
 # first funtion written in python
-def myfunc():
-    print('hello world')
+# def myfunc():
+#     print('hello world')
+
+# first funtion with an input and string interpulation
+def myfunc(name):
+    print('Hello {}'.format(name))
+

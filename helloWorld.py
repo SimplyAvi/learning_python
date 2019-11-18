@@ -19,6 +19,12 @@ print('have to work on git merge to check the differences between one branch on 
 #     print('hello world')
 
 # first funtion with an input and string interpulation
-def myfunc(name):
-    print('Hello {}'.format(name))
+# def myfunc(name):
+#     print('Hello {}'.format(name))
 
+#  first function with an argument and conditional statment
+def myfunc(arg):
+    if arg == True:
+        return "hello"
+    elif alse:
+        return 'goodbye'

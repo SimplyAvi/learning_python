@@ -31,8 +31,15 @@ print('have to work on git merge to check the differences between one branch on 
 
 # using multiple inputs to check boolean statements
 
-def myfunc(x, y, z):
-    if z == True:
-        return x
-    elif z == False:
-        return y
+# def myfunc(x, y, z):
+#     if z == True:
+#         return x
+#     elif z == False:
+#         return y
+
+# doing simple math with functions
+
+
+def myfunc(arg1, arg2):
+    return arg1 + arg2
+

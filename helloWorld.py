@@ -23,8 +23,16 @@ print('have to work on git merge to check the differences between one branch on 
 #     print('Hello {}'.format(name))
 
 #  first function with an argument and conditional statment
-def myfunc(arg):
-    if arg == True:
-        return "hello"
-    elif alse:
-        return 'goodbye'
+# def myfunc(arg):
+#     if arg == True:
+#         return "hello"
+#     elif alse:
+#         return 'goodbye'
+
+# using multiple inputs to check boolean statements
+
+def myfunc(x, y, z):
+    if z == True:
+        return x
+    elif z == False:
+        return y

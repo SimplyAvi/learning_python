@@ -44,19 +44,31 @@ print('have to work on git merge to check the differences between one branch on 
 #     return arg1 + arg2
 
 # LESSER OF TWO EVENS: Write a function that returns the lesser of two given numbers if both numbers are even, but returns the greater if one or both numbers are odd
-def lesser_of_two_evens(a, b):
-    if a % 2 == 0 and b % 2 == 0:
-        #         both numbers are even
-        if a < b:
-            result = a
-        else:
-            result = b
-#             you can return min(a,b)
+# def lesser_of_two_evens(a, b):
+#     if a % 2 == 0 and b % 2 == 0:
+#         #         both numbers are even
+#         if a < b:
+#             result = a
+#         else:
+#             result = b
+# #             you can return min(a,b)
+#     else:
+#         #     numbers are odd
+#         if a < b:
+#             result = b
+#         else:
+#             result = a
+# #             you can return max(a,b)
+#     return result
+
+
+#### ANIMAL CRACKERS: Write a function takes a two-word string and returns True if both words begin with same letter
+def animal_crackers(text):
+    word_arr = text.split()
+    if word_arr[0][0].lower() == word_arr[1][0].lower():
+        return True
     else:
-        #     numbers are odd
-        if a < b:
-            result = b
-        else:
-            result = a
-#             you can return max(a,b)
-    return result
+        return False
+
+#     you can also run this as a one liner :
+#   return word_arr[0][0].lower() == word_arr[1][0].lower()

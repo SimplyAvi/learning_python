@@ -84,19 +84,29 @@ print('have to work on git merge to check the differences between one branch on 
 #       return (n1 + n2) == 20 or n1 == 20 or n2 == 20
 
 #### OLD MACDONALD: Write a function that capitalizes the first and fourth letters of a name
-def old_macdonald(name):
-    #     new_word = ''
-    #     i = 0
-    #     for letter in range(0, len(name)):
-    #         i += 1
-    #         if i == 1 or i == 5:
-    #             new_word += letter.upper()
-    #         else:
-    #             new_word += letter
-    #             i+=1
-    #     return new_word
+    # def old_macdonald(name):
+    # this is wrong
+                            #     new_word = ''
+                            #     i = 0
+                            #     for letter in range(0, len(name)):
+                            #         i += 1
+                            #         if i == 1 or i == 5:
+                            #             new_word += letter.upper()
+                            #         else:
+                            #             new_word += letter
+                            #             i+=1
+                            #     return new_word
+# done with the code below
+    # first_split = name[:3]
+    # remaining_split = name[3:]
 
-    first_split = name[:3]
-    remaining_split = name[3:]
+    # return first_split.capitalize() + remaining_split.capitalize()
 
-    return first_split.capitalize() + remaining_split.capitalize()
+#### MASTER YODA: Given a sentence, return a sentence with the words reversed
+def master_yoda(text):
+    word_arr = text.split()
+#     splits the words to work with them individually
+    result = word_arr[::-1]
+#     reverses the order of the letters inside of the words
+    return ' '.join(result)
+#   returns the array into a string of words seperated by a apsce

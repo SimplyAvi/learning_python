@@ -74,11 +74,29 @@ print('have to work on git merge to check the differences between one branch on 
 #   return word_arr[0][0].lower() == word_arr[1][0].lower()
 
 #### MAKES TWENTY: Given two integers, return True if the sum of the integers is 20 *or* if one of the integers is 20. If not, return False
-def makes_twenty(n1, n2):
-    if n1 + n2 == 20:
-        return True
-    else:
-        return n1 == 20 or n2 == 20
+# def makes_twenty(n1, n2):
+#     if n1 + n2 == 20:
+#         return True
+#     else:
+#         return n1 == 20 or n2 == 20
 
 #     also written with or statement
 #       return (n1 + n2) == 20 or n1 == 20 or n2 == 20
+
+#### OLD MACDONALD: Write a function that capitalizes the first and fourth letters of a name
+def old_macdonald(name):
+    #     new_word = ''
+    #     i = 0
+    #     for letter in range(0, len(name)):
+    #         i += 1
+    #         if i == 1 or i == 5:
+    #             new_word += letter.upper()
+    #         else:
+    #             new_word += letter
+    #             i+=1
+    #     return new_word
+
+    first_split = name[:3]
+    remaining_split = name[3:]
+
+    return first_split.capitalize() + remaining_split.capitalize()

@@ -63,12 +63,22 @@ print('have to work on git merge to check the differences between one branch on 
 
 
 #### ANIMAL CRACKERS: Write a function takes a two-word string and returns True if both words begin with same letter
-def animal_crackers(text):
-    word_arr = text.split()
-    if word_arr[0][0].lower() == word_arr[1][0].lower():
-        return True
-    else:
-        return False
+# def animal_crackers(text):
+#     word_arr = text.split()
+#     if word_arr[0][0].lower() == word_arr[1][0].lower():
+#         return True
+#     else:
+#         return False
 
 #     you can also run this as a one liner :
 #   return word_arr[0][0].lower() == word_arr[1][0].lower()
+
+#### MAKES TWENTY: Given two integers, return True if the sum of the integers is 20 *or* if one of the integers is 20. If not, return False
+def makes_twenty(n1, n2):
+    if n1 + n2 == 20:
+        return True
+    else:
+        return n1 == 20 or n2 == 20
+
+#     also written with or statement
+#       return (n1 + n2) == 20 or n1 == 20 or n2 == 20

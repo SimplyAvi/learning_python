@@ -103,10 +103,15 @@ print('have to work on git merge to check the differences between one branch on 
     # return first_split.capitalize() + remaining_split.capitalize()
 
 #### MASTER YODA: Given a sentence, return a sentence with the words reversed
-def master_yoda(text):
-    word_arr = text.split()
-#     splits the words to work with them individually
-    result = word_arr[::-1]
-#     reverses the order of the letters inside of the words
-    return ' '.join(result)
-#   returns the array into a string of words seperated by a apsce
+# def master_yoda(text):
+#     word_arr = text.split()
+# #     splits the words to work with them individually
+#     result = word_arr[::-1]
+# #     reverses the order of the letters inside of the words
+#     return ' '.join(result)
+# #   returns the array into a string of words seperated by a apsce
+
+
+#### ALMOST THERE: Given an integer n, return True if n is within 10 of either 100 or 200
+def almost_there(n):
+    return abs(100 - n) <= 10 or abs(200 - n) <= 10

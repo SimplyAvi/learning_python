@@ -124,8 +124,18 @@ print('have to work on git merge to check the differences between one branch on 
 #     return False
 
 #### PAPER DOLL: Given a string, return a string where for every character in the original there are three characters
-def paper_doll(text):
-    new_word = ''
-    for letter in text:
-        new_word += letter * 3
-    return new_word
+# def paper_doll(text):
+#     new_word = ''
+#     for letter in text:
+#         new_word += letter * 3
+#     return new_word
+
+
+#### BLACKJACK: Given three integers between 1 and 11, if their sum is less than or equal to 21, return their sum. If their sum exceeds 21 *and* there's an eleven, reduce the total sum by 10. Finally, if the sum (even after adjustment) exceeds 21, return 'BUST'
+def blackjack(a, b, c):
+    if a + b + c <= 21:
+        return a + b + c
+    elif (a+b+c) > 21 and (a == 11 or b == 11 or c == 11):
+        return a+b+c - 10
+    else:
+        return 'BUST'

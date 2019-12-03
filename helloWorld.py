@@ -141,21 +141,36 @@ print('have to work on git merge to check the differences between one branch on 
 #         return 'BUST'
 
 #### SUMMER OF '69: Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending to the next 9 (every 6 will be followed by at least one 9). Return 0 for no numbers.
-def summer_69(arr):
-    total_count = 0
-    add = True
+# def summer_69(arr):
+#     total_count = 0
+#     add = True
 
-    for num in arr:
-        while add:
-            if num != 6:
-                total_count += num
-                break
-            else:
-                add = False
-        while not add:
-            if num != 9:
-                break
-            else:
-                add = True
-                break
-    return total_count
+#     for num in arr:
+#         while add:
+#             if num != 6:
+#                 total_count += num
+#                 break
+#             else:
+#                 add = False
+#         while not add:
+#             if num != 9:
+#                 break
+#             else:
+#                 add = True
+#                 break
+#     return total_count
+
+
+#### SPY GAME: Write a function that takes in a list of integers and returns True if it contains 007 in order
+def spy_game(nums):
+
+    checklist = [0, 0, 7, 'Secret Code']
+#     [0,7, 'Encrypted Code'] (expected array after popping out the first item in the list equaling zero)
+#     [7,'Encrypted Code'] (expected array after popping out the second item in the list equaling zero)
+#     ['Encrypted Code'] (expected array after popping out the third item in the list equaling seven)
+#     putting a random value that it cannot hit allows the code to be evaluated with the length of one, Have to look into the underlying reason why comparing it with the value of zero does not allow the code to exicute
+    for num in nums:
+        if num == checklist[0]:
+            checklist.pop(0)
+#   if the length is equal to zero, 007 is in the list
+    return len(checklist) == 1

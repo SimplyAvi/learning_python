@@ -162,15 +162,41 @@ print('have to work on git merge to check the differences between one branch on 
 
 
 #### SPY GAME: Write a function that takes in a list of integers and returns True if it contains 007 in order
-def spy_game(nums):
+# def spy_game(nums):
 
-    checklist = [0, 0, 7, 'Secret Code']
-#     [0,7, 'Encrypted Code'] (expected array after popping out the first item in the list equaling zero)
-#     [7,'Encrypted Code'] (expected array after popping out the second item in the list equaling zero)
-#     ['Encrypted Code'] (expected array after popping out the third item in the list equaling seven)
-#     putting a random value that it cannot hit allows the code to be evaluated with the length of one, Have to look into the underlying reason why comparing it with the value of zero does not allow the code to exicute
-    for num in nums:
-        if num == checklist[0]:
-            checklist.pop(0)
-#   if the length is equal to zero, 007 is in the list
-    return len(checklist) == 1
+#     checklist = [0, 0, 7, 'Secret Code']
+# #     [0,7, 'Encrypted Code'] (expected array after popping out the first item in the list equaling zero)
+# #     [7,'Encrypted Code'] (expected array after popping out the second item in the list equaling zero)
+# #     ['Encrypted Code'] (expected array after popping out the third item in the list equaling seven)
+# #     putting a random value that it cannot hit allows the code to be evaluated with the length of one, Have to look into the underlying reason why comparing it with the value of zero does not allow the code to exicute
+#     for num in nums:
+#         if num == checklist[0]:
+#             checklist.pop(0)
+# #   if the length is equal to zero, 007 is in the list
+#     return len(checklist) == 1
+
+
+#### COUNT PRIMES: Write a function that returns the *number* of prime numbers that exist up to and including a given number
+def count_primes(num):
+    #     check for zero or one
+    if num < 2:
+        return 0
+#     case for two or greater
+
+# stored prime numbers
+    primes = [2]
+
+# counter going up to the input number
+    counter = 3
+    while counter <= num:
+        #         checking if x is prime
+        for y in range(3, counter, 2):
+            if counter % y == 0:
+                counter += 2
+                break
+        else:
+            #     python allows you to do for else statements since you have a break in the previous line
+            primes.append(counter)
+            counter += 2
+    print(primes)
+    return len(primes)

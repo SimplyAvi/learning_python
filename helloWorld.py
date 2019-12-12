@@ -177,26 +177,39 @@ print('have to work on git merge to check the differences between one branch on 
 
 
 #### COUNT PRIMES: Write a function that returns the *number* of prime numbers that exist up to and including a given number
-def count_primes(num):
-    #     check for zero or one
-    if num < 2:
-        return 0
-#     case for two or greater
+# def count_primes(num):
+#     #     check for zero or one
+#     if num < 2:
+#         return 0
+# #     case for two or greater
 
-# stored prime numbers
-    primes = [2]
+# # stored prime numbers
+#     primes = [2]
 
-# counter going up to the input number
-    counter = 3
-    while counter <= num:
-        #         checking if x is prime
-        for y in range(3, counter, 2):
-            if counter % y == 0:
-                counter += 2
-                break
-        else:
-            #     python allows you to do for else statements since you have a break in the previous line
-            primes.append(counter)
-            counter += 2
-    print(primes)
-    return len(primes)
+# # counter going up to the input number
+#     counter = 3
+#     while counter <= num:
+#         #         checking if x is prime
+#         for y in range(3, counter, 2):
+#             if counter % y == 0:
+#                 counter += 2
+#                 break
+#         else:
+#             #     python allows you to do for else statements since you have a break in the previous line
+#             primes.append(counter)
+#             counter += 2
+#     print(primes)
+#     return len(primes)
+
+# Fill in the Line class methods to accept coordinates as a pair of tuples and return the slope and distance of the line.
+class Line:
+
+    def __init__(self, coor1, coor2):
+        self.coor1 = coor1
+        self.coor2 = coor2
+
+    def distance(self):
+        return ((self.coor1[1] - self.coor2[1]) ** 2 + (self.coor1[0] - self.coor2[0])**2)**.5
+
+    def slope(self):
+        return ((self.coor2[1] - self.coor1[1])/((self.coor2[0] - self.coor1[0])))

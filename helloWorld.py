@@ -218,14 +218,38 @@ print('have to work on git merge to check the differences between one branch on 
 
 
 # calculations for a cylinder 
-class Cylinder:
+# class Cylinder:
 
-    def __init__(self, height=1, radius=1):
-        self.height = height
-        self.radius = radius
+#     def __init__(self, height=1, radius=1):
+#         self.height = height
+#         self.radius = radius
 
-    def volume(self):
-        return 3.14 * self.radius**2 * self.height
+#     def volume(self):
+#         return 3.14 * self.radius**2 * self.height
 
-    def surface_area(self):
-        return 2 * 3.14 * self.radius * self.height + 2 * 3.14 * self.radius**2
+#     def surface_area(self):
+#         return 2 * 3.14 * self.radius * self.height + 2 * 3.14 * self.radius**2
+
+
+# create a bank account class that has two attributes Owner and balance
+# and two methods: deposit and withdraw
+# Instantiate your class, make several deposits and withdrawals, and test to make sure the account can't be overdrawn.
+class Account:
+
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance = self.balance + amount
+        print(f" added {amount} to balance")
+
+    def withdraw(self, take):
+        if take > self.balance:
+            return print('Dunds Unavaliable')
+        else:
+            self.balance = self.balance - take
+            return print('Withdrawal Accepted')
+
+    def __str__(self):
+        return f"Owner: {self.owner} \n Balance: {self.balance}"

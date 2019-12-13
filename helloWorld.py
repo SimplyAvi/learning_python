@@ -272,13 +272,35 @@ def add(num1, num2):
 add(num1, num2)  #errors out because num2 is not a valid number
 
 # try 
+# try:
+#     # want to attempt this code
+#     # may hhave error
+#     # result = 10 + '10'
+#     result = 10 + 10
+# except:
+#     print('looks like you arent adding properly')
+# else:
+#     print('add went well')
+#     print(result)
+
+# another example of try and finally framework
 try:
-    # want to attempt this code
-    # may hhave error
-    # result = 10 + '10'
-    result = 10 + 10
+    f = open('testfile', 'w')
+    f.write('Write a test line')
+except TypeError:
+    print('There was a type error!')
+except OSError:
+    print('Hey you have an OS error')
 except:
-    print('looks like you arent adding properly')
-else:
-    print('add went well')
-    print(result)
+    print('All other exceptions')
+finally:
+    print('I always run')
+
+
+def ask_for_init():
+    try:
+        result = int(input('please provide a number: '))
+    except:
+        print('thats not an number')
+    finally:
+        print('end of try/except/finially')

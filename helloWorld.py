@@ -298,9 +298,15 @@ finally:
 
 
 def ask_for_init():
-    try:
-        result = int(input('please provide a number: '))
-    except:
-        print('thats not an number')
-    finally:
-        print('end of try/except/finially')
+    while True:
+        try:
+            result = int(input('please provide a number: '))
+        except:
+            print('thats not an number')
+            continue
+        else:
+            print('yes thank you')
+            break
+        finally:
+            print('end of try/except/finially')
+            print('always run at the end')

@@ -233,23 +233,52 @@ print('have to work on git merge to check the differences between one branch on 
 
 # create a bank account class that has two attributes Owner and balance
 # and two methods: deposit and withdraw
-# Instantiate your class, make several deposits and withdrawals, and test to make sure the account can't be overdrawn.
-class Account:
+# # Instantiate your class, make several deposits and withdrawals, and test to make sure the account can't be overdrawn.
+# class Account:
 
-    def __init__(self, owner, balance):
-        self.owner = owner
-        self.balance = balance
+#     def __init__(self, owner, balance):
+#         self.owner = owner
+#         self.balance = balance
 
-    def deposit(self, amount):
-        self.balance = self.balance + amount
-        print(f" added {amount} to balance")
+#     def deposit(self, amount):
+#         self.balance = self.balance + amount
+#         print(f" added {amount} to balance")
 
-    def withdraw(self, take):
-        if take > self.balance:
-            return print('Dunds Unavaliable')
-        else:
-            self.balance = self.balance - take
-            return print('Withdrawal Accepted')
+#     def withdraw(self, take):
+#         if take > self.balance:
+#             return print('Dunds Unavaliable')
+#         else:
+#             self.balance = self.balance - take
+#             return print('Withdrawal Accepted')
 
-    def __str__(self):
-        return f"Owner: {self.owner} \n Balance: {self.balance}"
+#     def __str__(self):
+#         return f"Owner: {self.owner} \n Balance: {self.balance}"
+
+
+
+
+
+
+
+
+
+# error handeling
+num1 = 20
+num2 = input('Please provide input number')
+
+def add(num1, num2):
+    print(num2 + num1)
+    
+add(num1, num2)  #errors out because num2 is not a valid number
+
+# try 
+try:
+    # want to attempt this code
+    # may hhave error
+    # result = 10 + '10'
+    result = 10 + 10
+except:
+    print('looks like you arent adding properly')
+else:
+    print('add went well')
+    print(result)

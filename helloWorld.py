@@ -263,50 +263,63 @@ print('have to work on git merge to check the differences between one branch on 
 
 
 # error handeling
-num1 = 20
-num2 = input('Please provide input number')
+# num1 = 20
+# num2 = input('Please provide input number')
 
-def add(num1, num2):
-    print(num2 + num1)
+# def add(num1, num2):
+#     print(num2 + num1)
     
-add(num1, num2)  #errors out because num2 is not a valid number
+# add(num1, num2)  #errors out because num2 is not a valid number
 
 # try 
-# try:
-#     # want to attempt this code
-#     # may hhave error
-#     # result = 10 + '10'
-#     result = 10 + 10
-# except:
-#     print('looks like you arent adding properly')
-# else:
-#     print('add went well')
-#     print(result)
+    # try:
+    #     # want to attempt this code
+    #     # may hhave error
+    #     # result = 10 + '10'
+    #     result = 10 + 10
+    # except:
+    #     print('looks like you arent adding properly')
+    # else:
+    #     print('add went well')
+    #     print(result)
 
 # another example of try and finally framework
-try:
-    f = open('testfile', 'w')
-    f.write('Write a test line')
-except TypeError:
-    print('There was a type error!')
-except OSError:
-    print('Hey you have an OS error')
-except:
-    print('All other exceptions')
-finally:
-    print('I always run')
+# try:
+#     f = open('testfile', 'w')
+#     f.write('Write a test line')
+# except TypeError:
+#     print('There was a type error!')
+# except OSError:
+#     print('Hey you have an OS error')
+# except:
+#     print('All other exceptions')
+# finally:
+#     print('I always run')
 
 
-def ask_for_init():
+# def ask_for_init():
+#     while True:
+#         try:
+#             result = int(input('please provide a number: '))
+#         except:
+#             print('thats not an number')
+#             continue
+#         else:
+#             print('yes thank you')
+#             break
+#         finally:
+#             print('end of try/except/finially')
+#             print('always run at the end')
+
+
+
+# another way to ask for an integer
+def ask():
     while True:
         try:
-            result = int(input('please provide a number: '))
+            n = int(input('enter a number'))
         except:
-            print('thats not an number')
+            print('please tryagain! \n')
             continue
         else:
-            print('yes thank you')
             break
-        finally:
-            print('end of try/except/finially')
-            print('always run at the end')

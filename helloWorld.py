@@ -314,12 +314,20 @@ print('have to work on git merge to check the differences between one branch on 
 
 
 # another way to ask for an integer
-def ask():
-    while True:
-        try:
-            n = int(input('enter a number'))
-        except:
-            print('please tryagain! \n')
-            continue
-        else:
-            break
+# def ask():
+#     while True:
+#         try:
+#             n = int(input('enter a number'))
+#         except:
+#             print('please tryagain! \n')
+#             continue
+#         else:
+#             break
+
+#     print(n**2)
+
+# installing test pylint - pip install pylint
+
+
+
+

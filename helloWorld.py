@@ -328,6 +328,11 @@ print('have to work on git merge to check the differences between one branch on 
 
 # installing test pylint - pip install pylint
 
+a = 1
+b = 2
+print(a)
+print(B)
 
-
+# mistake with the capital B
+# to catch these errors run: pylint helloWorld.py -> name of file you want to exicute
 

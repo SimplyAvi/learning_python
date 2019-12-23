@@ -331,8 +331,23 @@ print('have to work on git merge to check the differences between one branch on 
 a = 1
 b = 2
 print(a)
-print(B)
+# print(B)
 
 # mistake with the capital B
 # to catch these errors run: pylint helloWorld.py -> name of file you want to exicute
 
+
+
+'''my simple script
+with a test'''
+
+def myfunc():
+    '''
+    a simple function
+    '''
+    first = 1
+    second = 2
+    print(first)
+    print(second)
+
+myfunc()

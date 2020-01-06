@@ -328,9 +328,9 @@ print('have to work on git merge to check the differences between one branch on 
 
 # installing test pylint - pip install pylint
 
-a = 1
-b = 2
-print(a)
+# a = 1
+# b = 2
+# print(a)
 # print(B)
 
 # mistake with the capital B
@@ -338,16 +338,42 @@ print(a)
 
 
 
-'''my simple script
-with a test'''
+# '''my simple script
+# with a test'''
 
-def myfunc():
-    '''
-    a simple function
-    '''
-    first = 1
-    second = 2
-    print(first)
-    print(second)
+# def myfunc():
+#     '''
+#     a simple function
+#     '''
+#     first = 1
+#     second = 2
+#     print(first)
+#     print(second)
 
-myfunc()
+# myfunc()
+
+
+# decorators
+
+# # @some_decorator
+# def simple_fun():
+#     #does something
+#     return 1
+
+
+def hello(name='Avi'):
+    print('the hello() funtion has been exicuted')
+
+    def greet():
+        return '\t This is the greet() function inside hello!'
+
+    def welcome():
+        return '\t This is the welcome() function inside hello!'
+
+
+    print(greet())
+# greetings = hello()
+# greetings()
+
+# del hello()
+# greetings()

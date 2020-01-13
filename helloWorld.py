@@ -361,19 +361,71 @@ print('have to work on git merge to check the differences between one branch on 
 #     return 1
 
 
-def hello(name='Avi'):
-    print('the hello() funtion has been exicuted')
+# def hello(name='Avi'):
+#     print('the hello() funtion has been exicuted')
 
-    def greet():
-        return '\t This is the greet() function inside hello!'
+#     def greet():
+#         return '\t This is the greet() function inside hello!'
 
-    def welcome():
-        return '\t This is the welcome() function inside hello!'
+#     def welcome():
+#         return '\t This is the welcome() function inside hello!'
 
 
-    print(greet())
+#     print('Im going to return a funtion')
+
+#     if name == 'Avi':
+#         return greet
+#     else:
+#         return welcome
+
+
+# new_func = hello('Avi')
+
+# def hello():
+#     return 'Hi Avi'
+
+# def other(some_func):
+#     print('Other code runs here!')
+#     print(some_func)
+
+
+# other(hello)
 # greetings = hello()
 # greetings()
 
 # del hello()
 # greetings()
+
+
+# def new_decorator(original_func):
+    
+
+#     def wrap_func():
+
+#         print('Some extra code before the original function')
+
+#         original_func()
+
+#         print('Some extra code after the original function')
+    
+#     return wrap_func
+
+# def func_needs_decorator():
+#     print('I want to be decorated')
+
+# decorated_func = new_decorator(func_needs_decorator)
+
+# @new_decorator
+# def func_needs_decorator():
+#     print('I want to be decorated')
+
+# func_needs_decorator()
+
+
+def cubed_func(n):
+    result = []
+    for x in range(n):
+        result.append(x ** 3)
+    return result
+
+cubed_func(10)

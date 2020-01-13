@@ -422,10 +422,22 @@ print('have to work on git merge to check the differences between one branch on 
 # func_needs_decorator()
 
 
-def cubed_func(n):
-    result = []
-    for x in range(n):
-        result.append(x ** 3)
-    return result
+# def cubed_func(n):
+#     result = []
+#     for x in range(n):
+#         result.append(x ** 3)
+#     return result
 
-cubed_func(10)
+# print(cubed_func(10))
+
+
+
+def cubed_func(n):
+   
+    for x in range(n):
+        yield (x ** 3)
+
+for x in cubed_func(10):
+    print(x)
+    
+# print(cubed_func(10))

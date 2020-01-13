@@ -432,12 +432,24 @@ print('have to work on git merge to check the differences between one branch on 
 
 
 
-def cubed_func(n):
+# def cubed_func(n):
    
-    for x in range(n):
-        yield (x ** 3)
+#     for x in range(n):
+#         yield (x ** 3)
 
-for x in cubed_func(10):
-    print(x)
-    
+# for x in cubed_func(10):
+#     print(x)
+
 # print(cubed_func(10))
+
+
+def gen_fib(n):
+    a = 0
+    b = 1
+
+    for x in range(n):
+        yield a
+        a, b = b, a + b
+
+for number in gen_fib(10):
+    print(number)

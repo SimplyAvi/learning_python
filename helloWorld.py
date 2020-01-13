@@ -443,13 +443,27 @@ print('have to work on git merge to check the differences between one branch on 
 # print(cubed_func(10))
 
 
+# def gen_fib(n):
+#     a = 0
+#     b = 1
+
+#     for x in range(n):
+#         yield a
+#         a, b = b, a + b
+
+# for number in gen_fib(10):
+#     print(number)
+
+
 def gen_fib(n):
     a = 0
     b = 1
+    output = []
 
     for x in range(n):
-        yield a
+        output.append(a)
         a, b = b, a + b
+    return output
 
 for number in gen_fib(10):
     print(number)

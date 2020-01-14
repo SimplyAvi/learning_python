@@ -1,3 +1,4 @@
+import random
 print('hello world from pythons code in terminal')
 # ran python within terminal - python helloWorld.py
 
@@ -470,11 +471,27 @@ print('have to work on git merge to check the differences between one branch on 
 
 # Create a generator that generates the squares of numbers up to some number N.
 
-def gensquares(N):
+# def gensquares(N):
 
-    for i in range(N):
-        yield i**2
+#     for i in range(N):
+#         yield i**2
 
 
-for x in gensquares(10):
-    print(x)
+# for x in gensquares(10):
+#     print(x)
+
+
+# Create a generator that yields "n" random numbers between a low and high number (that are inputs).
+
+
+random.randint(1, 10)
+
+
+def rand_num(low, high, n):
+
+    for i in range(n):
+        yield random.randint(low, high)
+
+
+for num in rand_num(1, 10, 12):
+    print(num)

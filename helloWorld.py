@@ -455,15 +455,26 @@ print('have to work on git merge to check the differences between one branch on 
 #     print(number)
 
 
-def gen_fib(n):
-    a = 0
-    b = 1
-    output = []
+# def gen_fib(n):
+#     a = 0
+#     b = 1
+#     output = []
 
-    for x in range(n):
-        output.append(a)
-        a, b = b, a + b
-    return output
+#     for x in range(n):
+#         output.append(a)
+#         a, b = b, a + b
+#     return output
 
-for number in gen_fib(10):
-    print(number)
+# for number in gen_fib(10):
+#     print(number)
+
+# Create a generator that generates the squares of numbers up to some number N.
+
+def gensquares(N):
+
+    for i in range(N):
+        yield i**2
+
+
+for x in gensquares(10):
+    print(x)

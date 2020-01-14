@@ -498,9 +498,20 @@ print('have to work on git merge to check the differences between one branch on 
 
 
 # Use the iter() function to convert the string below into an iterator:
-s = 'hello'
+# s = 'hello'
 
-s_iter = iter(s)
+# s_iter = iter(s)
 
-for i in s_iter:
-    print(i)
+# for i in s_iter:
+#     print(i)
+
+
+# gencomp
+my_list = [1, 2, 3, 4, 5]
+
+gencomp = (item for item in my_list if item > 3)
+
+for item in gencomp:
+    print(item)
+
+# returns the number of items in the satasified list
